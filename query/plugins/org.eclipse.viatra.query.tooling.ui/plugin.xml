@@ -70,8 +70,9 @@
          <view
                id="org.eclipse.viatra.query.tooling.ui.queryexplorer.QueryExplorer"
                ratio="0.5"
-               relationship="right"
-               relative="org.eclipse.ui.views.TaskList">
+               relationship="stack"
+               relative="org.eclipse.ui.views.TaskList"
+               visible="false">
          </view>
          <newWizardShortcut
                id="org.eclipse.viatra.query.tooling.ui.newvqlfile">
@@ -82,8 +83,9 @@
          <view
                id="org.eclipse.viatra.query.tooling.ui.queryexplorer.QueryExplorer"
                ratio="0.5"
-               relationship="right"
-               relative="org.eclipse.ui.views.TaskList">
+               relationship="stack"
+               relative="org.eclipse.ui.views.TaskList"
+               visible="false">
          </view>
          <newWizardShortcut
                id="org.eclipse.viatra.query.tooling.ui.newvqlfile">
@@ -624,5 +626,14 @@
                class="org.eclipse.viatra.query.tooling.ui.QueryLanguageExecutableExtensionFactory">
                <parameter name="guicekey" value="org.eclipse.viatra.query.tooling.ui.builder.ViatraQueryProjectBuilder"/>
          </run></builder>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="org.eclipse.viatra.query.tooling.ui.perspective.TransformationDevelopmentPerspective"
+            icon="icons/rsz_viatra_logo.png"
+            id="org.eclipse.viatra.query.tooling.ui.TransformationDevPerspective"
+            name="Transformation Development">
+      </perspective>
    </extension>
 </plugin>
